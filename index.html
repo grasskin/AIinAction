@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!-- Countdown -->
+    <script defer  src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script>
+    <link rel="stylesheet" href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css">
+
+</head>
+
+<body>
+    <div style="width: 100%; text-align:center; background: white;">
+        <img id="logo" src="assets/img/AIinActionLogo.png" alt="AI in Action" style="width:20em">
+        <h5><em>A Seminar Series for AI in Industry and Government</em></h5>
+        <br>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light" id="bignav">
+        <!-- <div class="container-fluid"> -->
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+            <h3 id="bigname" class="mx-auto"><b>Presented by the CMU BSAI program</b></h3>
+
+            <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-justify"></i>
+            </button> -->
+
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page</a>
+                    </li>
+                </ul>
+            </div> -->
+        <!-- </div> -->
+    </nav>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <div id="sidebar-container">
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li>
+                        <a href="#prevSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Previous Speakers</a>
+                        <ul class="collapse list-unstyled" id="prevSubmenu">
+                            <li class="dropit">
+                                <a href="#andrew">Andrew Moore</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li>
+                        <a href="#" class="article">ZOOM LINK</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <div class="card" id="home">
+                <div class="card-header">
+                    <h1>Next seminar in</h1>
+                </div>
+                <div class="card-body text-center" id="andrew">
+                    <div id="flipdown" class="flipdown"></div>
+                    <br>
+                    <br>
+                    <p>
+                        Coming soon!
+                    </p>
+                </div>
+
+            </div>
+
+        <div class="line"></div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>Previous Speakers</h1>
+                  </div>
+                <div class="card-body" id="andrew">
+                    <div class="text-center">
+                        <h2 class="card-title">Andrew Moore</h2>
+                        <img src="assets/img/andrewmoore.png"></img>
+                    </div>
+                    <br>
+                    <h3 class="card-subtitle">How we get to the point where AI is running the world.</h6>
+                        <p>Andrew W. Moore, PhD, is a distinguished computer scientist with expertise in machine learning and robotics. He became the Head of Google Cloud Artificial Intelligence division in January 2019. Moore previously worked at Google from 2006 to 2014 and was the founding director of Google’s Pittsburgh engineering office in 2006. He then spent a four-year hiatus at Carnegie Mellon University as the dean of the School of Computer Science.</p>
+                        <p>Andrew’s research interests encompass the field of “big data” — applying statistical methods and mathematical formulas to massive quantities of information, ranging from web searches to astronomy to medical records, in order to identify patterns and extract meaning from that information. His past research has included improving the ability of robots and other automated systems to sense the world around them and respond appropriately.</p>
+                            
+                        <p>Andrew lives in Pittsburgh.</p>
+                </div>
+              </div>
+
+            <br>
+
+
+            <div class="line"></div>
+
+            <div class="card" id="about">
+                <div class="card-header">
+                    <h1>About AI in ACTION</h1>
+                </div>
+                <div class="card-body" id="about">
+                    <p>AI in Action: a Seminar Series for AI in Industry and Government, sponsored by Aptiv and hosted by the SCS BSAI program.</p>
+                    <p>This series will discuss the applications of AI in innovation and automation in real-world environments. Whether it be autonomous vehicles, healthcare, defense, government intelligence, or advertising, the use of AI is widespread, and this seminar series will feature people who work at the intersection of AI and their respective fields.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+        $("li").click(
+            function(event) {
+                $('li').removeClass('active');
+                $(this).addClass('active');
+                console.log(this)
+            }
+        );
+        var twoDaysFromNow = (new Date().getTime() / 1000);
+
+        // Set up FlipDown
+        var flipdown = new FlipDown(twoDaysFromNow).start()
+    });
+</script>
+
+</html>
